@@ -3,5 +3,5 @@
 npm run build
 mv build ..
 git checkout gh-pages
-mv -fv ../build/* .
-rmdir ../build
+cp -rv ../build/* .
+rm -rf ../build
