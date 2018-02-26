@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getParams, getPlayerParams } from './helpers/search-params';
+import { urlParams, filterPlayerParams } from './helpers/search-params';
 import { V3inline, V3LightBox } from './components/v3';
 import { V4inline, V4LightBox } from './components/v4';
 
@@ -13,22 +13,22 @@ class App extends Component {
   };
 
   componentWillMount() {
-    const params = getParams(window.location.search);
-    const playerParams = getPlayerParams(Object.keys(this.state), params);
+    const params = urlParams();
+    const playerParams = filterPlayerParams(Object.keys(this.state), params);
 
     this.setState({
-      domain: params.get('domain') || this.state.domain,
-      env: params.get('env') || this.state.env,
-      js: params.get('js') || this.state.js,
-      type: params.get('type') || this.state.type,
-      uuid: params.get('uuid') || this.state.uuid,
+      domain: params.domain || this.state.domain,
+      env: params.env || this.state.env,
+      js: params.js || this.state.js,
+      type: params.type || this.state.type,
+      uuid: params.uuid || this.state.uuid,
       playerParams,
     });
-
-    console.log('params: ', this.state);
   }
 
   render() {
+    console.log('params: ', this.state);
+
     const comp = (type => {
       switch (this.state.type) {
         case 'v3inline':

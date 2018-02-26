@@ -1,12 +1,26 @@
-const getParams = urlString => new URLSearchParams(urlString);
-const toQueryString = ob => new URLSearchParams(ob).toString();
+const urlParams = (urlString = window.location.search) => {
+  try {
+    return urlString
+      .split('?')[1]
+      .split('&')
+      .reduce((acc, keyValStr) => {
+        const [key, val] = keyValStr.split('=');
+        acc[key] = val;
+        return acc;
+      }, {});
+  } catch (e) {
+    return {};
+  }
+};
 
-const getPlayerParams = (configKeys, params) =>
-  Array.from(params.keys())
-    .filter(key => !configKeys.includes(key))
-    .reduce(
-      (acc, filterdKey) => ({ ...acc, [filterdKey]: params.get(filterdKey) }),
-      {},
-    );
+const toQueryString = (obj) =>
+  Object.keys(obj)
+    .map((key) => `${key}=${obj[key]}`)
+    .join('&');
 
-export { getParams, toQueryString, getPlayerParams };
+const filterPlayerParams = (configKeys, params) =>
+  Object.keys(params)
+    .filter((key) => !configKeys.includes(key))
+    .reduce((acc, filterdKey) => ({ ...acc, [filterdKey]: params[filterdKey] }), {});
+
+export { urlParams, toQueryString, filterPlayerParams };
