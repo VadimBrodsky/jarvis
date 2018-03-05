@@ -13,7 +13,7 @@ class V4EmbedScript extends React.Component {
   }
 
   render() {
-    return <div ref="inlineScript" />;
+    return (<div ref="inlineScript" />);
   }
 }
 

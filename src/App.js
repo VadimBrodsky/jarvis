@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { urlParams, filterPlayerParams } from './helpers/search-params';
 import { V3inline, V3LightBox } from './components/v3';
 import { V4inline, V4LightBox } from './components/v4';
+import EmbedUI from './components/ui';
 
 class App extends Component {
   state = {
@@ -29,7 +30,7 @@ class App extends Component {
   render() {
     console.log('params: ', this.state);
 
-    const comp = (type => {
+    const comp = ((type) => {
       switch (this.state.type) {
         case 'v3inline':
           return <V3inline {...this.state} />;
@@ -44,7 +45,12 @@ class App extends Component {
       }
     })(this.state.type);
 
-    return comp;
+    return (
+      <div>
+        {comp}
+        <EmbedUI params={this.state} />
+      </div>
+    )
   }
 }
 

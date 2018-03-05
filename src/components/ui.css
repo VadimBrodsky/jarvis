@@ -1,0 +1,14 @@
+.ui {
+  background: #e4e4e4;
+  padding: 1em;
+  font-family: monospace;
+  line-height: 2;
+}
+
+.ui label {
+  display: block;
+}
+
+.ui label input, .ui label select {
+  margin-left: 1em;
+}
