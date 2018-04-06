@@ -3,7 +3,7 @@ import './ui.css';
 import { toQueryString } from '../helpers/search-params';
 
 export default class EmbedUI extends Component {
-  envOptions = ['com', 'dev'];
+  envOptions = ['com', 'test', 'dev'];
   typeOptions = ['v3inline', 'v3lightbox', 'v4inline', 'v4lightbox'];
 
   state = {
