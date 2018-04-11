@@ -3,11 +3,15 @@ body {
   margin: 0;
   padding: 0;
 }
-.vidyard_player, .vidyard-player-container {
-  min-height: 180px;
-  min-width: 320px;
-  border: 3px solid darkslategrey;
-  display: block;
+
+#root {
   background-color: lightslategray;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-width: 200px;
+  width: 80%;
 }
 
+.vidyard-player-embed {
+  max-width: 100%;
+}
