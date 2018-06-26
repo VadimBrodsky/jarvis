@@ -2,11 +2,9 @@ import React from 'react';
 
 const V4Image = ({ domain, env, uuid, playerParams, type }) => {
   const dataParams = Object.entries({
-    height: 260,
     type,
     uuid,
     v: 4,
-    width: 360,
     ...playerParams,
   })
     .filter(param => param[0] !== 'NA')
