@@ -1,5 +1,3 @@
-import React, { Component } from 'react';
-import { urlParams, filterPlayerParams } from './helpers/search-params';
 import { V3inline, V3LightBox } from './components/v3';
 import { V4inline, V4LightBox } from './components/v4';
 import EmbedUI from './components/ui';
@@ -9,8 +7,8 @@ class App extends Component {
     domain: 'play',
     env: 'com',
     js: '',
-    type: 'v3inline',
-    uuid: 'QK4FcA7a4LRsfd5rZa26E8',
+    type: 'v4inline',
+    uuid: 'Dwujq5bQhHYMbMkqogEsLj',
   };
 
   componentWillMount() {
