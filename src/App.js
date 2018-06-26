@@ -1,3 +1,5 @@
+import React, { Component } from 'react';
+import { urlParams, filterPlayerParams } from './helpers/search-params';
 import { V3inline, V3LightBox } from './components/v3';
 import { V4inline, V4LightBox } from './components/v4';
 import EmbedUI from './components/ui';
@@ -8,7 +10,7 @@ class App extends Component {
     env: 'com',
     js: '',
     type: 'v4inline',
-    uuid: 'Dwujq5bQhHYMbMkqogEsLj',
+    uuid: 'SuBX8GpAWVMu9VX3bUY2jN',
   };
 
   componentWillMount() {
@@ -22,7 +24,7 @@ class App extends Component {
       type: params.type || this.state.type,
       uuid: params.uuid || this.state.uuid,
       playerParams,
-    });
+   });
   }
 
   render() {
