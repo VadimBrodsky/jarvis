@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@vidyard/embed-code@^4.0.8":
+"@vidyard/embed-code@^4.0.9":
   version "4.0.9"
   resolved "http://npm.vidyard.vpc/@vidyard%2fembed-code/-/embed-code-4.0.9.tgz#c6853a8f1480b451c194f256e86931414fcc644d"
   dependencies:
