@@ -29,6 +29,7 @@ class App extends Component {
 
   render() {
     console.log('params: ', this.state);
+    window.VIDYARD_PLAYBACK_URL = `${this.state.domain}.vidyard.${this.state.env}`;
 
     const comp = ((type) => {
       switch (this.state.type) {

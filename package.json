@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://vadimbrodsky.com/jarvis/",
   "dependencies": {
+    "@vidyard/embed-code": "^4.0.8",
     "express": "^4.16.2",
     "gh-pages": "^1.1.0",
     "raf": "^3.4.0",
