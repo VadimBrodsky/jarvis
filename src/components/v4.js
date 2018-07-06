@@ -1,5 +1,4 @@
 import React from 'react';
-import V4EmbedScript from './v4-embed-script';
 import V4Image from './v4-image';
 
 const V4inline = options => (
